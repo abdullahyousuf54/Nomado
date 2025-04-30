@@ -1,0 +1,66 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+  <!-- <br><br> -->
+  <div class="row mt-3">
+    <div class="col-8 offset-2">
+    <h3>Create a New Listing</h3>
+    <br>
+  <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+    <input
+      name="listing[title]"
+      placeholder="Enter title"
+      class="form-control"
+      required
+    />
+    <div class="valid-feedback">Title looks good!</div>
+    <div class="invalid-feedback">Please enter a title</div>
+    </div>
+    
+    <div class="mb-3">
+        <label for="description" class="form-label">Add Description</label>
+        <textarea
+      name="listing[description]"
+      class="form-control"
+      required
+    ></textarea>
+    <div class="valid-feedback">Nice description</div>
+    <div class="invalid-feedback">Add a description</div>
+    </div>
+    
+
+    <div class="mb-3">
+      <label for="image" class="form-label">Upload Image </label>
+      <input name="listing[image]" type="file" class="form-control"/>
+    </div>
+    
+    <div class="row">
+        <div class="mb-3 col-md-4">
+            <label for="price" class="form-label">Add Price</label>
+            <input name="listing[price]" placeholder="Enter price"  class="form-control" required/>
+            <div class="invalid-feedback">Enter a valid price</div>
+        </div>
+
+        <div class="mb-3 col-md-8">
+            <label for="country" class="form-label">Add Country</label>
+            <input name="listing[country]" placeholder="Enter country" class="form-control" required/>
+            <div class="invalid-feedback">Enter country name</div>
+        </div>
+    </div>
+    
+
+    <div class="mb-3">
+        <label for="location" class="form-label">Add Location</label>
+        <input name="listing[location]" placeholder="Enter location" class="form-control" required />
+        <div class="invalid-feedback">Enter location</div>
+    </div>
+    
+   
+    
+    <br>
+    <button class="btn new-btn">Add</button>
+  </form><br><br>
+</div>
+</div>
+</body>
