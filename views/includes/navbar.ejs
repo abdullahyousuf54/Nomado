@@ -1,7 +1,10 @@
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/"><i class="fa-solid fa-umbrella-beach"></i></a>
-    <button
+    <a href="/" class="fs-5 fw-bold text-reset text-decoration-none text-dark-emphasis playfair-display-title ">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width='2em' height='1.8em'><defs><mask id="ipTBeachUmbrella0"><g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path fill="#f0170f" d="M14.34 21.412L24 24l9.66 2.588l9.659 2.589C45.657 20.45 41.848 11.526 34.546 7a20 20 0 0 0-5.37-2.318A20 20 0 0 0 22.5 4.05c-8.237.62-15.56 6.342-17.818 14.773z"/><path d="M29.176 4.681s-5.64 3.665-8.866 7.977s-4.037 9.271-4.037 9.271M29.177 4.681s3.052 5.995 3.69 11.342s-1.14 10.048-1.14 10.048"/><path d="m4.682 18.824l9.659 2.588L24 24l9.658 2.588l9.66 2.589M4 44h40M24 24l-5.5 20m4-39.949a20 20 0 0 1 6.676.63a20 20 0 0 1 5.37 2.32"/></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#ipTBeachUmbrella0)"/></svg>
+      Nomado
+    </a>
+        <button
       class="navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
@@ -12,13 +15,13 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link" href="/">Home</a>
-        <a class="nav-link" href="/listings">All Listings</a>
+    <div class="collapse navbar-collapse playfair-display-title fs-5 " id="navbarNavAltMarkup">
+      <div class="navbar-nav fw-bolder">
+        <i class="fa-solid fa-house"></i>
+        <a class="nav-link " href="/listings">Explore</a>
         <a class="nav-link" href="/listings/new">Add new Listings</a>
       </div>
-      <div class="navbar-nav ms-auto">
+      <div class="navbar-nav ms-auto fw-bolder">
         <% if (!currUser) { %>
           <a class="nav-link" href="/signup">Sign up</a>
           <a class="nav-link" href="/login">Log in</a>

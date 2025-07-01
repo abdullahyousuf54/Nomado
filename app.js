@@ -76,9 +76,7 @@ const sessionOptions = {
 
 
 
-app.get("/",(req,res)=> {
-    res.send("Hii");
-})
+
 
 app.use(session(sessionOptions));
 app.use(flash());
@@ -108,6 +106,10 @@ app.use((req,res,next) => {
     res.locals.error = req.flash("error");
     res.locals.currUser = req.user;
     next();
+})
+
+app.get("/",async(req,res)=> {
+    res.render("home/home.ejs");
 })
 
 app.use("/",userRouter);
