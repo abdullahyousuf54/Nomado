@@ -259,17 +259,17 @@ body h1 {
   .hero-image1{
     object-fit:cover !important;
     object-position: 30% center;
-    height: 95% !important;
+    height: 97% !important;
     width: 87% !important;
   }
   .hero-image2{
     object-fit:cover !important;
-    object-position: 90% center;
-    height: 95% !important;
+    object-position:70% center;
+    height: 97% !important;
     width: 87% !important;
   }
   .hero-btn{
-    width: 16vw !important;
+    width: 17.6vw !important;
     position: relative;
     left: 12%;
   }
@@ -316,7 +316,6 @@ body h1 {
     padding-right: 1rem;
   }
 }
-
 
 
 
