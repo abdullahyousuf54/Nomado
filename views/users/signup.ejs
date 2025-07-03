@@ -1,8 +1,8 @@
 <% layout("/layouts/boilerplate") %>
 <body>
-    <h1 class="col-6 offset-3  playfair-display-title fw-semibold">Signup for WanderLust</h1>
+    <h1 class="col-12 col-md-6 offset-md-3  playfair-display-title fw-semibold fs-1">Signup for WanderLust</h1>
     <div class="row mt-3">
-        <div class="col-6 offset-3">
+        <div class="col-12 col-md-6 offset-md-3">
             <form action="/signup" method="POST" class="needs-validation  playfair-display-title" novalidate>
                 <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
@@ -36,9 +36,13 @@
                           required
                         />
                     </div>
-                    <button class="btn btn-success">Signup</button>
+                    <div class="col-12 offset-4">
+                      <button class="btn btn-success">Signup</button>
+                    </div>
+                    
                     
             </form>
+            <br>
         </div>
     </div>
 </body>
