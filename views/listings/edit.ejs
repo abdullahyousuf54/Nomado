@@ -4,23 +4,33 @@
     
     
     <div class="row">
-        <div class="col-8 offset-2">
-            <h3>Edit this listing</h3>
+        <div class="col-12 col-md-8 offset-md-2">
+
+        <div class="col-12 col-md-12">
+            <h3 class="playfair-display-title fw-semibold text-center">
+            Edit this listing
+            </h3>
+        </div>
             <br>
-    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation">
+    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
             <input name="listing[title]" value="<%= listing.title %>"  class="form-control" required>
         </div>
         
-        <div class="mb-3">
+        <div class="mb-3" >
             <label for="description" class="form-label">Description</label>
-            <textarea name="listing[description]" class="form-control" required><%= listing.description %></textarea>
+            <textarea name="listing[description]" class="form-control" rows="6" required ><%= listing.description %></textarea>
         </div>
         
         <div class="mb-3">
-            <label for="image" class="form-label">Image URL</label>
-            <input name="listing[image]" value="<%= listing.image %>"  class="form-control" required>
+            Current Image <br>
+            <img src= "<%= originalImageUrl  %>"/>
+        </div>
+
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload New Image </label>
+            <input name="listing[image]" type="file"  class="form-control" >
         </div>
         
         <div class="row">
@@ -39,7 +49,10 @@
             <input name="listing[location]" value="<%= listing.location %>" class="form-control" required>
         </div>
         
-        <button class="btn new-btn">Edit</button>
+        <div class="col-12 col-md-12 offset-5">
+            <button class="btn new-btn">Edit</button>
+        </div>
+        
     </form>
 
 </div> </div>

@@ -34,6 +34,7 @@ router
   .put(
     isOwner,
     isLoggedIn,
+    upload.single("listing[image]"),
     validateListing,
     wrapAsync(listingController.updateListing)
   ) //Update Route

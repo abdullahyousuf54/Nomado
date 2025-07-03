@@ -1,9 +1,15 @@
 <% layout("/layouts/boilerplate") %>
 <body>
   <!-- <br><br> -->
-  <div class="row mt-3">
-    <div class="col-8 offset-2">
-    <h3 class=" playfair-display-title fw-semibold">Create a New Listing</h3>
+  <div class="row mt-3 " >
+    <div class="new-div col-12  col-md-8 offset-md-2 d-flex flex-column">
+      
+    <div class="col-12 col-md-12">
+      <h3 class="playfair-display-title fw-semibold text-center">
+        Create a New Listing
+      </h3>
+    </div>
+
     <br>
   <form method="POST" action="/listings" novalidate class="needs-validation  playfair-display-title" enctype="multipart/form-data">
     <div class="mb-3">
@@ -20,9 +26,9 @@
     
     <div class="mb-3">
         <label for="description" class="form-label">Add Description</label>
-        <textarea
+        <textarea placeholder="Add a description"
       name="listing[description]"
-      class="form-control"
+      class="form-control" rows="4"
       required
     ></textarea>
     <div class="valid-feedback">Nice description</div>
@@ -32,7 +38,7 @@
 
     <div class="mb-3">
       <label for="image" class="form-label">Upload Image </label>
-      <input name="listing[image]" type="file" class="form-control"/>
+      <input name="listing[image]" type="file" class="form-control" required/>
     </div>
     
     <div class="row">
@@ -59,7 +65,12 @@
    
     
     <br>
-    <button class="btn new-btn">Add</button>
+
+    <div class="col-12 col-md-12 offset-5" >
+      <button class="btn new-btn ">Add</button>
+    </div>
+
+    
   </form><br><br>
 </div>
 </div>
